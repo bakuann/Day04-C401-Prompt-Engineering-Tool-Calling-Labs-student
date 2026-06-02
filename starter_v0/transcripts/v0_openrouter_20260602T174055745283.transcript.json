@@ -1,0 +1,16 @@
+{
+  "transcript_id": "v0_openrouter_20260602T174055745283",
+  "version": "v0",
+  "artifact_version": "v0+p529b7749bff0+t6cdb53d5d7b8",
+  "prompt_hash": "529b7749bff01b21c4f94e5ed4568fa8d567fcc0673724c2d40906067c32dce8",
+  "tools_hash": "6cdb53d5d7b8de80d60b298b1357f462cedbedfae261d5ba60b08ccc401687c5",
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "system_prompt": "C:\\Users\\Dell\\github-classroom\\Day04-C401-Prompt-Engineering-Tool-Calling-Labs-student\\starter_v0\\artifacts\\system_prompt.md",
+  "tools": "C:\\Users\\Dell\\github-classroom\\Day04-C401-Prompt-Engineering-Tool-Calling-Labs-student\\starter_v0\\artifacts\\tools.yaml",
+  "history_window": 5,
+  "max_tool_rounds": 4,
+  "created_at": "2026-06-02T17:40:55",
+  "updated_at": "2026-06-02T17:40:58",
+  "turns": []
+}

@@ -1,0 +1,318 @@
+{
+  "transcript_id": "v0_openrouter_20260602T153300956651",
+  "version": "v0",
+  "artifact_version": "v0+peb1c8179815b+t6cdb53d5d7b8",
+  "prompt_hash": "eb1c8179815bd79d34de7d326420bb99b3072e6e8ae96464c02d4411f905fc68",
+  "tools_hash": "6cdb53d5d7b8de80d60b298b1357f462cedbedfae261d5ba60b08ccc401687c5",
+  "provider": "openrouter",
+  "model": "openai/gpt-4o-mini",
+  "system_prompt": "C:\\Users\\Dell\\github-classroom\\Day04-C401-Prompt-Engineering-Tool-Calling-Labs-student\\starter_v0\\artifacts\\system_prompt.md",
+  "tools": "C:\\Users\\Dell\\github-classroom\\Day04-C401-Prompt-Engineering-Tool-Calling-Labs-student\\starter_v0\\artifacts\\tools.yaml",
+  "history_window": 5,
+  "max_tool_rounds": 4,
+  "created_at": "2026-06-02T15:33:00",
+  "updated_at": "2026-06-02T15:59:23",
+  "turns": [
+    {
+      "turn_index": 1,
+      "started_at": "2026-06-02T15:33:14",
+      "user": "Xin chào, bạn có thể giúp gì cho tôi?",
+      "status": "answered",
+      "assistant_text": "Xin chào! Tôi có thể giúp bạn tìm kiếm thông tin, viết nội dung, hoặc thực hiện các tác vụ khác. Bạn cần gì hôm nay?",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": "Xin chào! Tôi có thể giúp bạn tìm kiếm thông tin, viết nội dung, hoặc thực hiện các tác vụ khác. Bạn cần gì hôm nay?",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [],
+      "ended_at": "2026-06-02T15:33:18"
+    },
+    {
+      "turn_index": 2,
+      "started_at": "2026-06-02T15:34:53",
+      "user": "Hãy tóm tắt bài báo có tiêu đề: \"Synergizing Deep Learning and Biological Heuristics for Extreme Long-Tail White Blood Cell Classification\" này ở trên arxiv",
+      "status": "answered",
+      "assistant_text": "Hiện tại, tôi không thể truy cập bài báo \"Synergizing Deep Learning and Biological Heuristics for Extreme Long-Tail White Blood Cell Classification\" trên arXiv do thời gian chờ quá lâu. Tôi sẽ thử lại để lấy thông tin cho bạn. Một chút thời gian nhé! \n\nTôi sẽ tiếp tục tìm kiếm bài báo này.",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "papers",
+              "args": {
+                "query": "Synergizing Deep Learning and Biological Heuristics for Extreme Long-Tail White Blood Cell Classification",
+                "max_results": 1
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "papers",
+              "args": {
+                "query": "Synergizing Deep Learning and Biological Heuristics for Extreme Long-Tail White Blood Cell Classification",
+                "max_results": 1
+              },
+              "result": {
+                "tool": "arxiv_search",
+                "error": "ReadTimeout",
+                "message": "HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=30)"
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Hiện tại, tôi không thể truy cập bài báo \"Synergizing Deep Learning and Biological Heuristics for Extreme Long-Tail White Blood Cell Classification\" trên arXiv do thời gian chờ quá lâu. Tôi sẽ thử lại để lấy thông tin cho bạn. Một chút thời gian nhé! \n\nTôi sẽ tiếp tục tìm kiếm bài báo này.",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "papers",
+          "args": {
+            "query": "Synergizing Deep Learning and Biological Heuristics for Extreme Long-Tail White Blood Cell Classification",
+            "max_results": 1
+          },
+          "result": {
+            "tool": "arxiv_search",
+            "error": "ReadTimeout",
+            "message": "HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=30)"
+          }
+        }
+      ],
+      "ended_at": "2026-06-02T15:35:40"
+    },
+    {
+      "turn_index": 3,
+      "started_at": "2026-06-02T15:36:30",
+      "user": "Hãy tải và tóm tắt bài báo có tiêu đề: \"Synergizing Deep Learning and Biological Heuristics for Extreme Long-Tail White Blood Cell Classification\" này ở trên arxiv",
+      "status": "answered",
+      "assistant_text": "Tôi không thể truy cập bài báo \"Synergizing Deep Learning and Biological Heuristics for Extreme Long-Tail White Blood Cell Classification\" trên arXiv do thời gian chờ quá lâu. Tôi sẽ thử lại để lấy thông tin cho bạn. Một chút thời gian nhé! \n\nNếu bạn cần thông tin khác, hãy cho tôi biết!",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "papers",
+              "args": {
+                "query": "Synergizing Deep Learning and Biological Heuristics for Extreme Long-Tail White Blood Cell Classification",
+                "max_results": 1
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "papers",
+              "args": {
+                "query": "Synergizing Deep Learning and Biological Heuristics for Extreme Long-Tail White Blood Cell Classification",
+                "max_results": 1
+              },
+              "result": {
+                "tool": "arxiv_search",
+                "error": "ReadTimeout",
+                "message": "HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=30)"
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Tôi không thể truy cập bài báo \"Synergizing Deep Learning and Biological Heuristics for Extreme Long-Tail White Blood Cell Classification\" trên arXiv do thời gian chờ quá lâu. Tôi sẽ thử lại để lấy thông tin cho bạn. Một chút thời gian nhé! \n\nNếu bạn cần thông tin khác, hãy cho tôi biết!",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "papers",
+          "args": {
+            "query": "Synergizing Deep Learning and Biological Heuristics for Extreme Long-Tail White Blood Cell Classification",
+            "max_results": 1
+          },
+          "result": {
+            "tool": "arxiv_search",
+            "error": "ReadTimeout",
+            "message": "HTTPSConnectionPool(host='export.arxiv.org', port=443): Read timed out. (read timeout=30)"
+          }
+        }
+      ],
+      "ended_at": "2026-06-02T15:37:11"
+    },
+    {
+      "turn_index": 4,
+      "started_at": "2026-06-02T15:38:14",
+      "user": "Hãy trích xuất nội dung của bài báo trong link này cho tôi: https://arxiv.org/pdf/2603.16249",
+      "status": "answered",
+      "assistant_text": "Đây là nội dung tóm tắt của bài báo \"Synergizing Deep Learning and Biological Heuristics for Extreme Long-Tail White Blood Cell Classification\":\n\n### Tóm tắt\nBài báo trình bày một khung kết hợp nhằm cải thiện phân loại tế bào bạch cầu (WBC) tự động, điều này rất quan trọng cho việc sàng lọc bệnh bạch cầu. Phân loại WBC gặp khó khăn do sự mất cân bằng lớp cực đoan, phân phối đuôi dài và sự chuyển giao miền, dẫn đến việc các mô hình sâu thường bị quá khớp với các lớp chiếm ưu thế và thất bại với các kiểu hiếm. \n\nKhung đề xuất bao gồm:\n1. **Module phục hồi dựa trên Pix2Pix**: Để loại bỏ các artefact.\n2. **Ensemble Swin Transformer**: Kết hợp với các nhúng MedSigLIP để học đại diện mạnh mẽ.\n3. **Bước tinh chỉnh sinh học**: Sử dụng độ nhọn hình học và các ràng buộc hình thái học dựa trên Mahalanobis để phục hồi các dự đoán ngoài phân phối.\n\nPhương pháp này đã đạt được Macro-F1 là 0.77139 trong thử thách WBCBench 2026, cho thấy hiệu suất mạnh mẽ dưới sự mất cân bằng nghiêm trọng và nhấn mạnh giá trị của việc tích hợp các ưu tiên sinh học vào học sâu cho phân tích hình ảnh huyết học.\n\n### Thông tin thêm\n- **Tác giả**: Duc T. Nguyen, Hoang-Long Nguyen, Huy-Hieu Pham\n- **Nguồn**: [arXiv](https://arxiv.org/abs/2603.16249)\n\nNếu bạn cần thêm thông tin chi tiết hoặc có yêu cầu khác, hãy cho tôi biết!",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "paper_text",
+              "args": {
+                "arxiv_url": "https://arxiv.org/pdf/2603.16249",
+                "max_pages": 5
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "paper_text",
+              "args": {
+                "arxiv_url": "https://arxiv.org/pdf/2603.16249",
+                "max_pages": 5
+              },
+              "result": {
+                "tool": "get_arxiv_paper_text",
+                "arxiv_id": "2603.16249",
+                "url": "https://arxiv.org/abs/2603.16249",
+                "pdf_url": "https://arxiv.org/pdf/2603.16249.pdf",
+                "pdf_path": "C:\\Users\\Dell\\github-classroom\\Day04-C401-Prompt-Engineering-Tool-Calling-Labs-student\\starter_v0\\arxiv_papers\\2603.16249.pdf",
+                "txt_path": "C:\\Users\\Dell\\github-classroom\\Day04-C401-Prompt-Engineering-Tool-Calling-Labs-student\\starter_v0\\arxiv_papers\\2603.16249.txt",
+                "page_count": 4,
+                "pages_read": 4,
+                "chars_returned": 8000,
+                "items": [
+                  {
+                    "title": "arXiv paper 2603.16249",
+                    "url": "https://arxiv.org/abs/2603.16249",
+                    "source": "arxiv.org",
+                    "summary": "SYNERGIZING DEEP LEARNING AND BIOLOGICAL HEURISTICS\nFOR EXTREME LONG-TAIL WHITE BLOOD CELL CLASSIFICATION\nDuc T. Nguyen1,2,3 Hoang-Long Nguyen1,2,3 Huy-Hieu Pham1,2,3,∗∗\n1 College of Engineering & Computer Science, VinUniversity, Hanoi, Vietnam\n2 VinUni-Illinois Smart Health Center, VinUniversity, Hanoi, Vietnam\n3 The Computer Vision and Medical AI Lab, VinUniversity, Hanoi, Vietnam\nABSTRACT\nAutomated white blood cell (WBC) classification is es-\nsential for leukemia screening but remains challenged by\nextreme class imbalance, long-tail distributions, and domain\nshift, leading deep models to overfit dominant classes and fail\non rare subtypes. We propose a hybrid framework for rare-\nclass generalization that integrates a generative Pix2Pix-based\nrestoration module for artifact removal, a Swin Transformer\nensemble with MedSigLIP contrastive embeddings for robust\nrepresentation learning, and a biologically-inspired refine-\nment step using geometric spikiness and Mahalanobis-based\nmorphological constraints to recover out-of-distribution pre-\ndictions. Evaluated on the WBCBench 2026 challenge, our\nmethod achieves a Macro-F1 of 0.77139 on the private leader-\nboard, demonstrating strong performance under severe imbal-\nance and highlighting the value of incorporating biological\npriors into deep learning for hematological image analy-\nsis. The code is available athttps://github.com/\ntrongduc-nguyen/WBCBench2026\nIndex Terms—White Blood Cell Classification, Class\nImbalance, GAN Restoration, Contrastive Learning, Morpho-\nlogical Refinement.\n1. INTRODUCTION\nAutomated white blood cell (WBC) classification is cru-\ncial for leukemia screening, yet deep learning (DL) models\nseverely underperform on real-world, long-tailed clinical\ndatasets [1, 2]. In hematology, this extreme class imbalance\nis compounded by high intra-class variation, subtle inter-\nclass morphological similarities, and synthetic domain shifts,\nleading to systematic misclassification of rare pathological\nsubtypes [3].\nTo address these compounding challenges, we propose\na robust three-stage hybrid framework integrating generative\ndomain restoration, hierarchical representation learning, and\nexpert-driven morphological refinement. Our method explic-\nitly mitigates severe data scarcity and domain shifts while en-\n∗Corresponding author: Huy-Hieu Pham (hieu.ph@vinuni.edu.vn).\nhancing rare-class semantic separability, securing a top-tier\nranking on the official WBCBench 2026 Challenge [4].\n2. PROPOSED METHODOLOGY\n2.1. Dataset and Distribution Analysis\nThe WBCBench 2026 dataset comprises 55,012 peripheral\nblood smear images, categorized into 13 fine-grained white\nblood cell (WBC) classes by expert hematopathologists. As\nvisualized in Fig. 1, the dataset exhibits an extreme long-tail\ndistribution that faithfully replicates real-world clinical preva-\nlence. The majority class, Segmented Neutrophils (SNE),\nFig. 1. Class distribution of the WBCBench 2026 dataset.\ndominates the training set with 17,354 samples. In stark con-\ntrast, rare pathological classes such as Plasma Cells (PC) and\nProlymphocytes (PLY) are represented by only 90 and 14\nsamples, respectively. The 1,200-fold class imbalance in-\nduces an extreme long-tailed recognition setting, where mi-\nnority classes operate under severe sample scarcity.\n2.2. Preprocessing and GAN Restoration\nRaw microscopy images often contain surrounding red blood\ncells and staining artifacts. To ensure downstream models fo-\ncus exclusively on leukocyte morphology, we implement a\ntwo-step preprocessing pipeline, as shown in Fig. 2.\narXiv:2603.16249v4  [cs.CV]  28 Mar 2026\n\nFig. 2. Overview of the proposed three-stage hybrid framework. The pipeline seamlessly integrates generative domain restora-\ntion (Stage 1), dual-branch semantic feature extraction (Stage 2), and biological filtering (Stage 3) to achieve robust classifica-\ntion under extreme long-tail distributions.\nFirst, we utilize the CellPose [5] framework to accurately\nlocalize and isolate the primary WBC, effectively removing\nirrelevant background context. Second, to address the de-\nstructive salt-and-pepper noise introduced by simulated do-\nmain shifts, we employ a synthetic paired-training Pix2Pix\nGAN [6] restoration strategy.\nAs the dataset lacks paired clean–noisy ground truth, we\ndesign a custom domain adaptation workflow:\n•Data Segregation:We first apply a quantitative noise fil-\nter (based on median blur residuals) to partition the raw\ndataset into noisy and clean subsets.\n•Synthetic Pair Generation:We develop a custom noise\ngenerator that injects simulated salt-and-pepper noise into\nthe clean subset, thereby generating synthetically paired\ntraining samples.\n•GAN Training:A Pix2Pix GAN architecture is then\ntrained exclusively on these synthetic pairs. The gener-\nator learns the complex non-linear mapping required to\ntranslate the corrupted domain back into the high-fidelity\nbiological domain.\n•Inference and Restoration:Finally, the trained GAN is\napplied to the original noisy subset. This inference effec-\ntively restores critical high-frequency morphological de-\ntails, such as cytoplasmic granules and nuclear textures,\nensuring standardized input quality before the feature ex-\ntraction stage.\n2.3. Dual-Branch Feature Classifier\nTo capture hierarchical textures and medically aligned seman-\ntic features, we propose a parallel dual-branch architecture.\nSpecifically, we independently train two distinct classification\nmodels to ensure that the representations remain complemen-\ntary and non-redundant.\n•Hierarchical Transformer Branch [7]:A Swin-T Trans-\nformer backbone captures spatial hierarchies. To coun-\nteract majority class dominance, this branch is optimized\nusing a cost-sensitive Focal Loss (γ= 2.0) parameter-\nized by inverse log-frequency class weights, alongside a\ndistribution-aware weighted random sampler.\n•Contrastive Branch (MedSigLIP):We utilize pre-\nextracted embeddings from MedSigLIP [8]. An ad-\nvanced projection head maps these embeddings into a\nlower-dimensional normalized latent space, yielding a\nsecondary, context-rich set of class probabilitiesP med.\n2.4. Adaptive Hybrid Refinement Strategy\nDeep models frequently misclassify rare pathological cells\nas common mature lymphocytes (LY) in out-of-distribution\n(OOD) scenarios. To recover these suppressed predictions,\nwe implement an adaptive divide-and-conquer strategy (Al-\ngorithm 1) that integrates sensitivity boosting, semantic veri-\nfication, and biological constraints.\nSpecifically, the biological filtering (Phase 3 of Algorithm\n1) addresses two primary morphological confusion pairs:\n•PLY vs. LY (Geometric Spikiness):Pathological PLY\ninstances often exhibit increased contour irregularity com-\npared to smooth mature LYs. We quantify this geometric\ndistinction via a Spikiness ScoreS, identifying PLY can-\ndidates through statistical outlier thresholds.\n•PC vs. LY/VLY (Mahalanobis Constraints):Plasma\ncells possess a voluminous cytoplasm that displaces the\nnucleus eccentrically. We extract a morphological vector\nV(Nuclear-Cytoplasmic ratio, staining intensity, and cen-\ntroid offset) and apply a Mahalanobis distance filterD M ,\nparameterized by group-specific covariance matrices, to\nisolate definitive PC samples.\n\nAlgorithm 1Suppress-and-Rescue Inference Strategy\n1:Input:ImageX, TransformerM Swin, MedSigLIP Head\nMM ed\n2:Parameters:Boost factorsB c, Semantic thresholdsτ,\nMorphological thresholdsτ S , τM\n3:Output:Final predicted classˆy\n4:P Swin ←M Swin (X)▷Base hierarchical probabilities\n5:y base ←arg max(P Swin )▷Initial prediction\n6:Phase 1: Sensitivity Boosting\n7:forc∈ {PLY,PC}do\n8: ˆPSwin [c]←P Swin [c]×B c ▷Scale by inverse\nlog-frequency\n9:end for\n10:C cand ←arg max( ˆPSwin )\n11:ifC cand /∈ {PLY,PC}then\n12:returny base ▷No rare candidate surfaced\n13:end if\n14:Phase 2: Contrastive Verification\n15:P M ed ←M M ed(X)\n16:ifP M ed[Ccand]< τthen\n17:returny base ▷Does not satisfy semantic verification\n18:end if\n19:Phase 3: Biological Filtering (Heuristics"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Đây là nội dung tóm tắt của bài báo \"Synergizing Deep Learning and Biological Heuristics for Extreme Long-Tail White Blood Cell Classification\":\n\n### Tóm tắt\nBài báo trình bày một khung kết hợp nhằm cải thiện phân loại tế bào bạch cầu (WBC) tự động, điều này rất quan trọng cho việc sàng lọc bệnh bạch cầu. Phân loại WBC gặp khó khăn do sự mất cân bằng lớp cực đoan, phân phối đuôi dài và sự chuyển giao miền, dẫn đến việc các mô hình sâu thường bị quá khớp với các lớp chiếm ưu thế và thất bại với các kiểu hiếm. \n\nKhung đề xuất bao gồm:\n1. **Module phục hồi dựa trên Pix2Pix**: Để loại bỏ các artefact.\n2. **Ensemble Swin Transformer**: Kết hợp với các nhúng MedSigLIP để học đại diện mạnh mẽ.\n3. **Bước tinh chỉnh sinh học**: Sử dụng độ nhọn hình học và các ràng buộc hình thái học dựa trên Mahalanobis để phục hồi các dự đoán ngoài phân phối.\n\nPhương pháp này đã đạt được Macro-F1 là 0.77139 trong thử thách WBCBench 2026, cho thấy hiệu suất mạnh mẽ dưới sự mất cân bằng nghiêm trọng và nhấn mạnh giá trị của việc tích hợp các ưu tiên sinh học vào học sâu cho phân tích hình ảnh huyết học.\n\n### Thông tin thêm\n- **Tác giả**: Duc T. Nguyen, Hoang-Long Nguyen, Huy-Hieu Pham\n- **Nguồn**: [arXiv](https://arxiv.org/abs/2603.16249)\n\nNếu bạn cần thêm thông tin chi tiết hoặc có yêu cầu khác, hãy cho tôi biết!",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "paper_text",
+          "args": {
+            "arxiv_url": "https://arxiv.org/pdf/2603.16249",
+            "max_pages": 5
+          },
+          "result": {
+            "tool": "get_arxiv_paper_text",
+            "arxiv_id": "2603.16249",
+            "url": "https://arxiv.org/abs/2603.16249",
+            "pdf_url": "https://arxiv.org/pdf/2603.16249.pdf",
+            "pdf_path": "C:\\Users\\Dell\\github-classroom\\Day04-C401-Prompt-Engineering-Tool-Calling-Labs-student\\starter_v0\\arxiv_papers\\2603.16249.pdf",
+            "txt_path": "C:\\Users\\Dell\\github-classroom\\Day04-C401-Prompt-Engineering-Tool-Calling-Labs-student\\starter_v0\\arxiv_papers\\2603.16249.txt",
+            "page_count": 4,
+            "pages_read": 4,
+            "chars_returned": 8000,
+            "items": [
+              {
+                "title": "arXiv paper 2603.16249",
+                "url": "https://arxiv.org/abs/2603.16249",
+                "source": "arxiv.org",
+                "summary": "SYNERGIZING DEEP LEARNING AND BIOLOGICAL HEURISTICS\nFOR EXTREME LONG-TAIL WHITE BLOOD CELL CLASSIFICATION\nDuc T. Nguyen1,2,3 Hoang-Long Nguyen1,2,3 Huy-Hieu Pham1,2,3,∗∗\n1 College of Engineering & Computer Science, VinUniversity, Hanoi, Vietnam\n2 VinUni-Illinois Smart Health Center, VinUniversity, Hanoi, Vietnam\n3 The Computer Vision and Medical AI Lab, VinUniversity, Hanoi, Vietnam\nABSTRACT\nAutomated white blood cell (WBC) classification is es-\nsential for leukemia screening but remains challenged by\nextreme class imbalance, long-tail distributions, and domain\nshift, leading deep models to overfit dominant classes and fail\non rare subtypes. We propose a hybrid framework for rare-\nclass generalization that integrates a generative Pix2Pix-based\nrestoration module for artifact removal, a Swin Transformer\nensemble with MedSigLIP contrastive embeddings for robust\nrepresentation learning, and a biologically-inspired refine-\nment step using geometric spikiness and Mahalanobis-based\nmorphological constraints to recover out-of-distribution pre-\ndictions. Evaluated on the WBCBench 2026 challenge, our\nmethod achieves a Macro-F1 of 0.77139 on the private leader-\nboard, demonstrating strong performance under severe imbal-\nance and highlighting the value of incorporating biological\npriors into deep learning for hematological image analy-\nsis. The code is available athttps://github.com/\ntrongduc-nguyen/WBCBench2026\nIndex Terms—White Blood Cell Classification, Class\nImbalance, GAN Restoration, Contrastive Learning, Morpho-\nlogical Refinement.\n1. INTRODUCTION\nAutomated white blood cell (WBC) classification is cru-\ncial for leukemia screening, yet deep learning (DL) models\nseverely underperform on real-world, long-tailed clinical\ndatasets [1, 2]. In hematology, this extreme class imbalance\nis compounded by high intra-class variation, subtle inter-\nclass morphological similarities, and synthetic domain shifts,\nleading to systematic misclassification of rare pathological\nsubtypes [3].\nTo address these compounding challenges, we propose\na robust three-stage hybrid framework integrating generative\ndomain restoration, hierarchical representation learning, and\nexpert-driven morphological refinement. Our method explic-\nitly mitigates severe data scarcity and domain shifts while en-\n∗Corresponding author: Huy-Hieu Pham (hieu.ph@vinuni.edu.vn).\nhancing rare-class semantic separability, securing a top-tier\nranking on the official WBCBench 2026 Challenge [4].\n2. PROPOSED METHODOLOGY\n2.1. Dataset and Distribution Analysis\nThe WBCBench 2026 dataset comprises 55,012 peripheral\nblood smear images, categorized into 13 fine-grained white\nblood cell (WBC) classes by expert hematopathologists. As\nvisualized in Fig. 1, the dataset exhibits an extreme long-tail\ndistribution that faithfully replicates real-world clinical preva-\nlence. The majority class, Segmented Neutrophils (SNE),\nFig. 1. Class distribution of the WBCBench 2026 dataset.\ndominates the training set with 17,354 samples. In stark con-\ntrast, rare pathological classes such as Plasma Cells (PC) and\nProlymphocytes (PLY) are represented by only 90 and 14\nsamples, respectively. The 1,200-fold class imbalance in-\nduces an extreme long-tailed recognition setting, where mi-\nnority classes operate under severe sample scarcity.\n2.2. Preprocessing and GAN Restoration\nRaw microscopy images often contain surrounding red blood\ncells and staining artifacts. To ensure downstream models fo-\ncus exclusively on leukocyte morphology, we implement a\ntwo-step preprocessing pipeline, as shown in Fig. 2.\narXiv:2603.16249v4  [cs.CV]  28 Mar 2026\n\nFig. 2. Overview of the proposed three-stage hybrid framework. The pipeline seamlessly integrates generative domain restora-\ntion (Stage 1), dual-branch semantic feature extraction (Stage 2), and biological filtering (Stage 3) to achieve robust classifica-\ntion under extreme long-tail distributions.\nFirst, we utilize the CellPose [5] framework to accurately\nlocalize and isolate the primary WBC, effectively removing\nirrelevant background context. Second, to address the de-\nstructive salt-and-pepper noise introduced by simulated do-\nmain shifts, we employ a synthetic paired-training Pix2Pix\nGAN [6] restoration strategy.\nAs the dataset lacks paired clean–noisy ground truth, we\ndesign a custom domain adaptation workflow:\n•Data Segregation:We first apply a quantitative noise fil-\nter (based on median blur residuals) to partition the raw\ndataset into noisy and clean subsets.\n•Synthetic Pair Generation:We develop a custom noise\ngenerator that injects simulated salt-and-pepper noise into\nthe clean subset, thereby generating synthetically paired\ntraining samples.\n•GAN Training:A Pix2Pix GAN architecture is then\ntrained exclusively on these synthetic pairs. The gener-\nator learns the complex non-linear mapping required to\ntranslate the corrupted domain back into the high-fidelity\nbiological domain.\n•Inference and Restoration:Finally, the trained GAN is\napplied to the original noisy subset. This inference effec-\ntively restores critical high-frequency morphological de-\ntails, such as cytoplasmic granules and nuclear textures,\nensuring standardized input quality before the feature ex-\ntraction stage.\n2.3. Dual-Branch Feature Classifier\nTo capture hierarchical textures and medically aligned seman-\ntic features, we propose a parallel dual-branch architecture.\nSpecifically, we independently train two distinct classification\nmodels to ensure that the representations remain complemen-\ntary and non-redundant.\n•Hierarchical Transformer Branch [7]:A Swin-T Trans-\nformer backbone captures spatial hierarchies. To coun-\nteract majority class dominance, this branch is optimized\nusing a cost-sensitive Focal Loss (γ= 2.0) parameter-\nized by inverse log-frequency class weights, alongside a\ndistribution-aware weighted random sampler.\n•Contrastive Branch (MedSigLIP):We utilize pre-\nextracted embeddings from MedSigLIP [8]. An ad-\nvanced projection head maps these embeddings into a\nlower-dimensional normalized latent space, yielding a\nsecondary, context-rich set of class probabilitiesP med.\n2.4. Adaptive Hybrid Refinement Strategy\nDeep models frequently misclassify rare pathological cells\nas common mature lymphocytes (LY) in out-of-distribution\n(OOD) scenarios. To recover these suppressed predictions,\nwe implement an adaptive divide-and-conquer strategy (Al-\ngorithm 1) that integrates sensitivity boosting, semantic veri-\nfication, and biological constraints.\nSpecifically, the biological filtering (Phase 3 of Algorithm\n1) addresses two primary morphological confusion pairs:\n•PLY vs. LY (Geometric Spikiness):Pathological PLY\ninstances often exhibit increased contour irregularity com-\npared to smooth mature LYs. We quantify this geometric\ndistinction via a Spikiness ScoreS, identifying PLY can-\ndidates through statistical outlier thresholds.\n•PC vs. LY/VLY (Mahalanobis Constraints):Plasma\ncells possess a voluminous cytoplasm that displaces the\nnucleus eccentrically. We extract a morphological vector\nV(Nuclear-Cytoplasmic ratio, staining intensity, and cen-\ntroid offset) and apply a Mahalanobis distance filterD M ,\nparameterized by group-specific covariance matrices, to\nisolate definitive PC samples.\n\nAlgorithm 1Suppress-and-Rescue Inference Strategy\n1:Input:ImageX, TransformerM Swin, MedSigLIP Head\nMM ed\n2:Parameters:Boost factorsB c, Semantic thresholdsτ,\nMorphological thresholdsτ S , τM\n3:Output:Final predicted classˆy\n4:P Swin ←M Swin (X)▷Base hierarchical probabilities\n5:y base ←arg max(P Swin )▷Initial prediction\n6:Phase 1: Sensitivity Boosting\n7:forc∈ {PLY,PC}do\n8: ˆPSwin [c]←P Swin [c]×B c ▷Scale by inverse\nlog-frequency\n9:end for\n10:C cand ←arg max( ˆPSwin )\n11:ifC cand /∈ {PLY,PC}then\n12:returny base ▷No rare candidate surfaced\n13:end if\n14:Phase 2: Contrastive Verification\n15:P M ed ←M M ed(X)\n16:ifP M ed[Ccand]< τthen\n17:returny base ▷Does not satisfy semantic verification\n18:end if\n19:Phase 3: Biological Filtering (Heuristics"
+              }
+            ]
+          }
+        }
+      ],
+      "ended_at": "2026-06-02T15:38:41"
+    },
+    {
+      "turn_index": 5,
+      "started_at": "2026-06-02T15:41:32",
+      "user": "Trong bài báo này, tác giả đã sử dụng những biến thể model của transformer nào?",
+      "status": "answered",
+      "assistant_text": "Trong bài báo \"Synergizing Deep Learning and Biological Heuristics for Extreme Long-Tail White Blood Cell Classification\", tác giả đã sử dụng biến thể model của transformer là **Swin Transformer**. Đây là một kiến trúc transformer được thiết kế để nắm bắt các đặc điểm không gian theo cấp bậc, giúp cải thiện khả năng phân loại trong bối cảnh mất cân bằng lớp nghiêm trọng.\n\nNếu bạn cần thêm thông tin chi tiết hoặc có yêu cầu khác, hãy cho tôi biết!",
+      "rounds": [
+        {
+          "round": 1,
+          "assistant_text": null,
+          "tool_calls": [
+            {
+              "name": "paper_text",
+              "args": {
+                "arxiv_url": "https://arxiv.org/pdf/2603.16249",
+                "max_pages": 5
+              }
+            }
+          ],
+          "tool_results": [
+            {
+              "tool": "paper_text",
+              "args": {
+                "arxiv_url": "https://arxiv.org/pdf/2603.16249",
+                "max_pages": 5
+              },
+              "result": {
+                "tool": "get_arxiv_paper_text",
+                "arxiv_id": "2603.16249",
+                "url": "https://arxiv.org/abs/2603.16249",
+                "pdf_url": "https://arxiv.org/pdf/2603.16249.pdf",
+                "pdf_path": "C:\\Users\\Dell\\github-classroom\\Day04-C401-Prompt-Engineering-Tool-Calling-Labs-student\\starter_v0\\arxiv_papers\\2603.16249.pdf",
+                "txt_path": "C:\\Users\\Dell\\github-classroom\\Day04-C401-Prompt-Engineering-Tool-Calling-Labs-student\\starter_v0\\arxiv_papers\\2603.16249.txt",
+                "page_count": 4,
+                "pages_read": 4,
+                "chars_returned": 8000,
+                "items": [
+                  {
+                    "title": "arXiv paper 2603.16249",
+                    "url": "https://arxiv.org/abs/2603.16249",
+                    "source": "arxiv.org",
+                    "summary": "SYNERGIZING DEEP LEARNING AND BIOLOGICAL HEURISTICS\nFOR EXTREME LONG-TAIL WHITE BLOOD CELL CLASSIFICATION\nDuc T. Nguyen1,2,3 Hoang-Long Nguyen1,2,3 Huy-Hieu Pham1,2,3,∗∗\n1 College of Engineering & Computer Science, VinUniversity, Hanoi, Vietnam\n2 VinUni-Illinois Smart Health Center, VinUniversity, Hanoi, Vietnam\n3 The Computer Vision and Medical AI Lab, VinUniversity, Hanoi, Vietnam\nABSTRACT\nAutomated white blood cell (WBC) classification is es-\nsential for leukemia screening but remains challenged by\nextreme class imbalance, long-tail distributions, and domain\nshift, leading deep models to overfit dominant classes and fail\non rare subtypes. We propose a hybrid framework for rare-\nclass generalization that integrates a generative Pix2Pix-based\nrestoration module for artifact removal, a Swin Transformer\nensemble with MedSigLIP contrastive embeddings for robust\nrepresentation learning, and a biologically-inspired refine-\nment step using geometric spikiness and Mahalanobis-based\nmorphological constraints to recover out-of-distribution pre-\ndictions. Evaluated on the WBCBench 2026 challenge, our\nmethod achieves a Macro-F1 of 0.77139 on the private leader-\nboard, demonstrating strong performance under severe imbal-\nance and highlighting the value of incorporating biological\npriors into deep learning for hematological image analy-\nsis. The code is available athttps://github.com/\ntrongduc-nguyen/WBCBench2026\nIndex Terms—White Blood Cell Classification, Class\nImbalance, GAN Restoration, Contrastive Learning, Morpho-\nlogical Refinement.\n1. INTRODUCTION\nAutomated white blood cell (WBC) classification is cru-\ncial for leukemia screening, yet deep learning (DL) models\nseverely underperform on real-world, long-tailed clinical\ndatasets [1, 2]. In hematology, this extreme class imbalance\nis compounded by high intra-class variation, subtle inter-\nclass morphological similarities, and synthetic domain shifts,\nleading to systematic misclassification of rare pathological\nsubtypes [3].\nTo address these compounding challenges, we propose\na robust three-stage hybrid framework integrating generative\ndomain restoration, hierarchical representation learning, and\nexpert-driven morphological refinement. Our method explic-\nitly mitigates severe data scarcity and domain shifts while en-\n∗Corresponding author: Huy-Hieu Pham (hieu.ph@vinuni.edu.vn).\nhancing rare-class semantic separability, securing a top-tier\nranking on the official WBCBench 2026 Challenge [4].\n2. PROPOSED METHODOLOGY\n2.1. Dataset and Distribution Analysis\nThe WBCBench 2026 dataset comprises 55,012 peripheral\nblood smear images, categorized into 13 fine-grained white\nblood cell (WBC) classes by expert hematopathologists. As\nvisualized in Fig. 1, the dataset exhibits an extreme long-tail\ndistribution that faithfully replicates real-world clinical preva-\nlence. The majority class, Segmented Neutrophils (SNE),\nFig. 1. Class distribution of the WBCBench 2026 dataset.\ndominates the training set with 17,354 samples. In stark con-\ntrast, rare pathological classes such as Plasma Cells (PC) and\nProlymphocytes (PLY) are represented by only 90 and 14\nsamples, respectively. The 1,200-fold class imbalance in-\nduces an extreme long-tailed recognition setting, where mi-\nnority classes operate under severe sample scarcity.\n2.2. Preprocessing and GAN Restoration\nRaw microscopy images often contain surrounding red blood\ncells and staining artifacts. To ensure downstream models fo-\ncus exclusively on leukocyte morphology, we implement a\ntwo-step preprocessing pipeline, as shown in Fig. 2.\narXiv:2603.16249v4  [cs.CV]  28 Mar 2026\n\nFig. 2. Overview of the proposed three-stage hybrid framework. The pipeline seamlessly integrates generative domain restora-\ntion (Stage 1), dual-branch semantic feature extraction (Stage 2), and biological filtering (Stage 3) to achieve robust classifica-\ntion under extreme long-tail distributions.\nFirst, we utilize the CellPose [5] framework to accurately\nlocalize and isolate the primary WBC, effectively removing\nirrelevant background context. Second, to address the de-\nstructive salt-and-pepper noise introduced by simulated do-\nmain shifts, we employ a synthetic paired-training Pix2Pix\nGAN [6] restoration strategy.\nAs the dataset lacks paired clean–noisy ground truth, we\ndesign a custom domain adaptation workflow:\n•Data Segregation:We first apply a quantitative noise fil-\nter (based on median blur residuals) to partition the raw\ndataset into noisy and clean subsets.\n•Synthetic Pair Generation:We develop a custom noise\ngenerator that injects simulated salt-and-pepper noise into\nthe clean subset, thereby generating synthetically paired\ntraining samples.\n•GAN Training:A Pix2Pix GAN architecture is then\ntrained exclusively on these synthetic pairs. The gener-\nator learns the complex non-linear mapping required to\ntranslate the corrupted domain back into the high-fidelity\nbiological domain.\n•Inference and Restoration:Finally, the trained GAN is\napplied to the original noisy subset. This inference effec-\ntively restores critical high-frequency morphological de-\ntails, such as cytoplasmic granules and nuclear textures,\nensuring standardized input quality before the feature ex-\ntraction stage.\n2.3. Dual-Branch Feature Classifier\nTo capture hierarchical textures and medically aligned seman-\ntic features, we propose a parallel dual-branch architecture.\nSpecifically, we independently train two distinct classification\nmodels to ensure that the representations remain complemen-\ntary and non-redundant.\n•Hierarchical Transformer Branch [7]:A Swin-T Trans-\nformer backbone captures spatial hierarchies. To coun-\nteract majority class dominance, this branch is optimized\nusing a cost-sensitive Focal Loss (γ= 2.0) parameter-\nized by inverse log-frequency class weights, alongside a\ndistribution-aware weighted random sampler.\n•Contrastive Branch (MedSigLIP):We utilize pre-\nextracted embeddings from MedSigLIP [8]. An ad-\nvanced projection head maps these embeddings into a\nlower-dimensional normalized latent space, yielding a\nsecondary, context-rich set of class probabilitiesP med.\n2.4. Adaptive Hybrid Refinement Strategy\nDeep models frequently misclassify rare pathological cells\nas common mature lymphocytes (LY) in out-of-distribution\n(OOD) scenarios. To recover these suppressed predictions,\nwe implement an adaptive divide-and-conquer strategy (Al-\ngorithm 1) that integrates sensitivity boosting, semantic veri-\nfication, and biological constraints.\nSpecifically, the biological filtering (Phase 3 of Algorithm\n1) addresses two primary morphological confusion pairs:\n•PLY vs. LY (Geometric Spikiness):Pathological PLY\ninstances often exhibit increased contour irregularity com-\npared to smooth mature LYs. We quantify this geometric\ndistinction via a Spikiness ScoreS, identifying PLY can-\ndidates through statistical outlier thresholds.\n•PC vs. LY/VLY (Mahalanobis Constraints):Plasma\ncells possess a voluminous cytoplasm that displaces the\nnucleus eccentrically. We extract a morphological vector\nV(Nuclear-Cytoplasmic ratio, staining intensity, and cen-\ntroid offset) and apply a Mahalanobis distance filterD M ,\nparameterized by group-specific covariance matrices, to\nisolate definitive PC samples.\n\nAlgorithm 1Suppress-and-Rescue Inference Strategy\n1:Input:ImageX, TransformerM Swin, MedSigLIP Head\nMM ed\n2:Parameters:Boost factorsB c, Semantic thresholdsτ,\nMorphological thresholdsτ S , τM\n3:Output:Final predicted classˆy\n4:P Swin ←M Swin (X)▷Base hierarchical probabilities\n5:y base ←arg max(P Swin )▷Initial prediction\n6:Phase 1: Sensitivity Boosting\n7:forc∈ {PLY,PC}do\n8: ˆPSwin [c]←P Swin [c]×B c ▷Scale by inverse\nlog-frequency\n9:end for\n10:C cand ←arg max( ˆPSwin )\n11:ifC cand /∈ {PLY,PC}then\n12:returny base ▷No rare candidate surfaced\n13:end if\n14:Phase 2: Contrastive Verification\n15:P M ed ←M M ed(X)\n16:ifP M ed[Ccand]< τthen\n17:returny base ▷Does not satisfy semantic verification\n18:end if\n19:Phase 3: Biological Filtering (Heuristics"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "assistant_text": "Trong bài báo \"Synergizing Deep Learning and Biological Heuristics for Extreme Long-Tail White Blood Cell Classification\", tác giả đã sử dụng biến thể model của transformer là **Swin Transformer**. Đây là một kiến trúc transformer được thiết kế để nắm bắt các đặc điểm không gian theo cấp bậc, giúp cải thiện khả năng phân loại trong bối cảnh mất cân bằng lớp nghiêm trọng.\n\nNếu bạn cần thêm thông tin chi tiết hoặc có yêu cầu khác, hãy cho tôi biết!",
+          "tool_calls": [],
+          "tool_results": []
+        }
+      ],
+      "tool_events": [
+        {
+          "tool": "paper_text",
+          "args": {
+            "arxiv_url": "https://arxiv.org/pdf/2603.16249",
+            "max_pages": 5
+          },
+          "result": {
+            "tool": "get_arxiv_paper_text",
+            "arxiv_id": "2603.16249",
+            "url": "https://arxiv.org/abs/2603.16249",
+            "pdf_url": "https://arxiv.org/pdf/2603.16249.pdf",
+            "pdf_path": "C:\\Users\\Dell\\github-classroom\\Day04-C401-Prompt-Engineering-Tool-Calling-Labs-student\\starter_v0\\arxiv_papers\\2603.16249.pdf",
+            "txt_path": "C:\\Users\\Dell\\github-classroom\\Day04-C401-Prompt-Engineering-Tool-Calling-Labs-student\\starter_v0\\arxiv_papers\\2603.16249.txt",
+            "page_count": 4,
+            "pages_read": 4,
+            "chars_returned": 8000,
+            "items": [
+              {
+                "title": "arXiv paper 2603.16249",
+                "url": "https://arxiv.org/abs/2603.16249",
+                "source": "arxiv.org",
+                "summary": "SYNERGIZING DEEP LEARNING AND BIOLOGICAL HEURISTICS\nFOR EXTREME LONG-TAIL WHITE BLOOD CELL CLASSIFICATION\nDuc T. Nguyen1,2,3 Hoang-Long Nguyen1,2,3 Huy-Hieu Pham1,2,3,∗∗\n1 College of Engineering & Computer Science, VinUniversity, Hanoi, Vietnam\n2 VinUni-Illinois Smart Health Center, VinUniversity, Hanoi, Vietnam\n3 The Computer Vision and Medical AI Lab, VinUniversity, Hanoi, Vietnam\nABSTRACT\nAutomated white blood cell (WBC) classification is es-\nsential for leukemia screening but remains challenged by\nextreme class imbalance, long-tail distributions, and domain\nshift, leading deep models to overfit dominant classes and fail\non rare subtypes. We propose a hybrid framework for rare-\nclass generalization that integrates a generative Pix2Pix-based\nrestoration module for artifact removal, a Swin Transformer\nensemble with MedSigLIP contrastive embeddings for robust\nrepresentation learning, and a biologically-inspired refine-\nment step using geometric spikiness and Mahalanobis-based\nmorphological constraints to recover out-of-distribution pre-\ndictions. Evaluated on the WBCBench 2026 challenge, our\nmethod achieves a Macro-F1 of 0.77139 on the private leader-\nboard, demonstrating strong performance under severe imbal-\nance and highlighting the value of incorporating biological\npriors into deep learning for hematological image analy-\nsis. The code is available athttps://github.com/\ntrongduc-nguyen/WBCBench2026\nIndex Terms—White Blood Cell Classification, Class\nImbalance, GAN Restoration, Contrastive Learning, Morpho-\nlogical Refinement.\n1. INTRODUCTION\nAutomated white blood cell (WBC) classification is cru-\ncial for leukemia screening, yet deep learning (DL) models\nseverely underperform on real-world, long-tailed clinical\ndatasets [1, 2]. In hematology, this extreme class imbalance\nis compounded by high intra-class variation, subtle inter-\nclass morphological similarities, and synthetic domain shifts,\nleading to systematic misclassification of rare pathological\nsubtypes [3].\nTo address these compounding challenges, we propose\na robust three-stage hybrid framework integrating generative\ndomain restoration, hierarchical representation learning, and\nexpert-driven morphological refinement. Our method explic-\nitly mitigates severe data scarcity and domain shifts while en-\n∗Corresponding author: Huy-Hieu Pham (hieu.ph@vinuni.edu.vn).\nhancing rare-class semantic separability, securing a top-tier\nranking on the official WBCBench 2026 Challenge [4].\n2. PROPOSED METHODOLOGY\n2.1. Dataset and Distribution Analysis\nThe WBCBench 2026 dataset comprises 55,012 peripheral\nblood smear images, categorized into 13 fine-grained white\nblood cell (WBC) classes by expert hematopathologists. As\nvisualized in Fig. 1, the dataset exhibits an extreme long-tail\ndistribution that faithfully replicates real-world clinical preva-\nlence. The majority class, Segmented Neutrophils (SNE),\nFig. 1. Class distribution of the WBCBench 2026 dataset.\ndominates the training set with 17,354 samples. In stark con-\ntrast, rare pathological classes such as Plasma Cells (PC) and\nProlymphocytes (PLY) are represented by only 90 and 14\nsamples, respectively. The 1,200-fold class imbalance in-\nduces an extreme long-tailed recognition setting, where mi-\nnority classes operate under severe sample scarcity.\n2.2. Preprocessing and GAN Restoration\nRaw microscopy images often contain surrounding red blood\ncells and staining artifacts. To ensure downstream models fo-\ncus exclusively on leukocyte morphology, we implement a\ntwo-step preprocessing pipeline, as shown in Fig. 2.\narXiv:2603.16249v4  [cs.CV]  28 Mar 2026\n\nFig. 2. Overview of the proposed three-stage hybrid framework. The pipeline seamlessly integrates generative domain restora-\ntion (Stage 1), dual-branch semantic feature extraction (Stage 2), and biological filtering (Stage 3) to achieve robust classifica-\ntion under extreme long-tail distributions.\nFirst, we utilize the CellPose [5] framework to accurately\nlocalize and isolate the primary WBC, effectively removing\nirrelevant background context. Second, to address the de-\nstructive salt-and-pepper noise introduced by simulated do-\nmain shifts, we employ a synthetic paired-training Pix2Pix\nGAN [6] restoration strategy.\nAs the dataset lacks paired clean–noisy ground truth, we\ndesign a custom domain adaptation workflow:\n•Data Segregation:We first apply a quantitative noise fil-\nter (based on median blur residuals) to partition the raw\ndataset into noisy and clean subsets.\n•Synthetic Pair Generation:We develop a custom noise\ngenerator that injects simulated salt-and-pepper noise into\nthe clean subset, thereby generating synthetically paired\ntraining samples.\n•GAN Training:A Pix2Pix GAN architecture is then\ntrained exclusively on these synthetic pairs. The gener-\nator learns the complex non-linear mapping required to\ntranslate the corrupted domain back into the high-fidelity\nbiological domain.\n•Inference and Restoration:Finally, the trained GAN is\napplied to the original noisy subset. This inference effec-\ntively restores critical high-frequency morphological de-\ntails, such as cytoplasmic granules and nuclear textures,\nensuring standardized input quality before the feature ex-\ntraction stage.\n2.3. Dual-Branch Feature Classifier\nTo capture hierarchical textures and medically aligned seman-\ntic features, we propose a parallel dual-branch architecture.\nSpecifically, we independently train two distinct classification\nmodels to ensure that the representations remain complemen-\ntary and non-redundant.\n•Hierarchical Transformer Branch [7]:A Swin-T Trans-\nformer backbone captures spatial hierarchies. To coun-\nteract majority class dominance, this branch is optimized\nusing a cost-sensitive Focal Loss (γ= 2.0) parameter-\nized by inverse log-frequency class weights, alongside a\ndistribution-aware weighted random sampler.\n•Contrastive Branch (MedSigLIP):We utilize pre-\nextracted embeddings from MedSigLIP [8]. An ad-\nvanced projection head maps these embeddings into a\nlower-dimensional normalized latent space, yielding a\nsecondary, context-rich set of class probabilitiesP med.\n2.4. Adaptive Hybrid Refinement Strategy\nDeep models frequently misclassify rare pathological cells\nas common mature lymphocytes (LY) in out-of-distribution\n(OOD) scenarios. To recover these suppressed predictions,\nwe implement an adaptive divide-and-conquer strategy (Al-\ngorithm 1) that integrates sensitivity boosting, semantic veri-\nfication, and biological constraints.\nSpecifically, the biological filtering (Phase 3 of Algorithm\n1) addresses two primary morphological confusion pairs:\n•PLY vs. LY (Geometric Spikiness):Pathological PLY\ninstances often exhibit increased contour irregularity com-\npared to smooth mature LYs. We quantify this geometric\ndistinction via a Spikiness ScoreS, identifying PLY can-\ndidates through statistical outlier thresholds.\n•PC vs. LY/VLY (Mahalanobis Constraints):Plasma\ncells possess a voluminous cytoplasm that displaces the\nnucleus eccentrically. We extract a morphological vector\nV(Nuclear-Cytoplasmic ratio, staining intensity, and cen-\ntroid offset) and apply a Mahalanobis distance filterD M ,\nparameterized by group-specific covariance matrices, to\nisolate definitive PC samples.\n\nAlgorithm 1Suppress-and-Rescue Inference Strategy\n1:Input:ImageX, TransformerM Swin, MedSigLIP Head\nMM ed\n2:Parameters:Boost factorsB c, Semantic thresholdsτ,\nMorphological thresholdsτ S , τM\n3:Output:Final predicted classˆy\n4:P Swin ←M Swin (X)▷Base hierarchical probabilities\n5:y base ←arg max(P Swin )▷Initial prediction\n6:Phase 1: Sensitivity Boosting\n7:forc∈ {PLY,PC}do\n8: ˆPSwin [c]←P Swin [c]×B c ▷Scale by inverse\nlog-frequency\n9:end for\n10:C cand ←arg max( ˆPSwin )\n11:ifC cand /∈ {PLY,PC}then\n12:returny base ▷No rare candidate surfaced\n13:end if\n14:Phase 2: Contrastive Verification\n15:P M ed ←M M ed(X)\n16:ifP M ed[Ccand]< τthen\n17:returny base ▷Does not satisfy semantic verification\n18:end if\n19:Phase 3: Biological Filtering (Heuristics"
+              }
+            ]
+          }
+        }
+      ],
+      "ended_at": "2026-06-02T15:42:16"
+    }
+  ]
+}
