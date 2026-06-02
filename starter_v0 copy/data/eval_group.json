@@ -1,0 +1,191 @@
+{
+  "dataset_id": "day04_v2_research_group",
+  "dataset_role": "group",
+  "description": "Case do NHÓM tự viết thêm để cover thêm trường hợp. 5 single-turn + 5 multi-turn. Mỗi case có id, phase='B', query HOẶC turns, failure_type (thuộc allowed_failure_types), và expect (tool_calls[...] hoặc no_tool=true), kèm metadata.what_it_tests.",
+  "allowed_failure_types": [
+    "wrong_tool",
+    "wrong_arg_value",
+    "wrong_boundary",
+    "unnecessary_tool",
+    "out_of_scope",
+    "missing_info"
+  ],
+  "cases": [
+    {
+      "id": "G01_fetch_given_url",
+      "phase": "B",
+      "suite": "group",
+      "query": "Đọc và tóm tắt giúp mình nội dung trang này: https://example.com/ai-report",
+      "failure_type": "wrong_tool",
+      "expect": {
+        "tool_calls": [
+          {
+            "name": "fetch",
+            "args": { "url": "https://example.com/ai-report" }
+          }
+        ]
+      },
+      "metadata": {
+        "what_it_tests": "Đã có URL cụ thể → fetch đúng url, KHÔNG dùng lookup/web_search."
+      }
+    },
+    {
+      "id": "G02_timeline_limit_arg",
+      "phase": "B",
+      "suite": "group",
+      "query": "Lấy 7 tweet mới nhất của Sam Altman",
+      "failure_type": "wrong_arg_value",
+      "expect": {
+        "tool_calls": [
+          { "name": "timeline", "args": { "screenname": "sama", "limit": 7 } }
+        ]
+      },
+      "metadata": {
+        "what_it_tests": "Map tên Sam Altman → handle sama và trích limit=7 từ '7 tweet'."
+      }
+    },
+    {
+      "id": "G03_papers_arxiv",
+      "phase": "B",
+      "suite": "group",
+      "query": "Tìm cho mình các paper trên arXiv về diffusion models",
+      "failure_type": "wrong_tool",
+      "expect": {
+        "tool_calls": [
+          { "name": "papers", "args": { "query": "diffusion models" } }
+        ]
+      },
+      "metadata": {
+        "what_it_tests": "Yêu cầu paper khoa học trên arXiv → papers, KHÔNG dùng lookup web search."
+      }
+    },
+    {
+      "id": "G04_out_of_scope_booking",
+      "phase": "B",
+      "suite": "group",
+      "query": "Đặt giúp mình một vé máy bay đi Đà Nẵng cuối tuần này",
+      "failure_type": "out_of_scope",
+      "expect": { "no_tool": true, "behavior": "refuse" },
+      "metadata": {
+        "what_it_tests": "Đặt vé nằm ngoài phạm vi research/news/social → KHÔNG gọi tool, từ chối/định hướng."
+      }
+    },
+    {
+      "id": "G05_keywords_from_text",
+      "phase": "B",
+      "suite": "group",
+      "query": "Từ đoạn text này, rút ra các từ khóa nổi bật nhất giúp mình: 'GPT GPT GPT OpenAI OpenAI robotics AI AI AI'",
+      "failure_type": "wrong_tool",
+      "expect": { "tool_calls": [{ "name": "keywords", "args": {} }] },
+      "metadata": {
+        "what_it_tests": "Yêu cầu trích keyword từ text đã có → tool keywords (tool mới của nhóm), KHÔNG đi search lại."
+      }
+    },
+
+    {
+      "id": "G06_clarify_then_handle",
+      "phase": "B",
+      "suite": "group",
+      "turns": [
+        { "role": "user", "content": "Lấy mấy tweet mới nhất giúp mình" },
+        { "role": "user", "content": "Của Sam Altman nhé" }
+      ],
+      "failure_type": "missing_info",
+      "expect": {
+        "tool_calls": [{ "name": "timeline", "args": { "screenname": "sama" } }]
+      },
+      "metadata": {
+        "what_it_tests": "Lượt 1 thiếu handle, lượt 2 bổ sung tên → map Sam Altman thành sama rồi gọi timeline."
+      }
+    },
+    {
+      "id": "G07_carryover_topic_switch",
+      "phase": "B",
+      "suite": "group",
+      "turns": [
+        { "role": "user", "content": "Tin công nghệ trong tuần này có gì?" },
+        {
+          "role": "user",
+          "content": "Đổi sang chủ đề AI thôi, vẫn là tin trong tuần"
+        }
+      ],
+      "failure_type": "wrong_arg_value",
+      "expect": {
+        "tool_calls": [
+          {
+            "name": "lookup",
+            "args": { "query": "AI", "topic": "news", "timeframe": "week" }
+          }
+        ]
+      },
+      "metadata": {
+        "what_it_tests": "Carry-over topic=news + timeframe=week từ lượt 1, đổi query sang AI ở lượt 2."
+      }
+    },
+    {
+      "id": "G08_confirm_then_send",
+      "phase": "B",
+      "suite": "group",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Đăng bản tin này lên Telegram giúp mình"
+        },
+        { "role": "user", "content": "Ừ mình xác nhận, gửi đi" }
+      ],
+      "failure_type": "wrong_boundary",
+      "expect": {
+        "tool_calls": [{ "name": "send", "args": { "confirmed": true } }]
+      },
+      "metadata": {
+        "what_it_tests": "Sau khi user xác nhận yes ở lượt 2 → mới gọi send với confirmed=true (không gửi ở lượt 1)."
+      }
+    },
+    {
+      "id": "G09_switch_to_web",
+      "phase": "B",
+      "suite": "group",
+      "turns": [
+        {
+          "role": "user",
+          "content": "Mọi người nói gì về Tesla trên Twitter?"
+        },
+        {
+          "role": "user",
+          "content": "Thôi bỏ Twitter, tìm trên web tin tức đi"
+        },
+        { "role": "user", "content": "Giữ chủ đề Tesla" }
+      ],
+      "failure_type": "wrong_tool",
+      "expect": {
+        "tool_calls": [
+          { "name": "lookup", "args": { "query": "Tesla", "topic": "news" } }
+        ]
+      },
+      "metadata": {
+        "what_it_tests": "Bỏ social_search, chuyển sang lookup topic=news, giữ chủ đề Tesla qua 3 lượt."
+      }
+    },
+    {
+      "id": "G10_correction_limit",
+      "phase": "B",
+      "suite": "group",
+      "turns": [
+        { "role": "user", "content": "Lấy 10 tweet mới nhất của Elon Musk" },
+        { "role": "user", "content": "Cho mình 5 thôi nhé" }
+      ],
+      "failure_type": "wrong_arg_value",
+      "expect": {
+        "tool_calls": [
+          {
+            "name": "timeline",
+            "args": { "screenname": "elonmusk", "limit": 5 }
+          }
+        ]
+      },
+      "metadata": {
+        "what_it_tests": "Carry handle elonmusk từ lượt 1, sửa limit 10→5 ở lượt 2."
+      }
+    }
+  ]
+}

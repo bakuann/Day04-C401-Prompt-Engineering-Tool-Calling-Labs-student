@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Research Agent — Poster</title>
+    <style>
+      :root {
+        --bg: #0f172a;
+        --card: #1e293b;
+        --card2: #243044;
+        --ink: #e2e8f0;
+        --muted: #94a3b8;
+        --accent: #38bdf8;
+        --accent2: #a78bfa;
+        --good: #34d399;
+        --warn: #fbbf24;
+        --line: #334155;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family:
+          "Segoe UI",
+          system-ui,
+          -apple-system,
+          sans-serif;
+        background:
+          radial-gradient(1200px 600px at 20% -10%, #1e3a5f55, transparent),
+          var(--bg);
+        color: var(--ink);
+        padding: 28px;
+        line-height: 1.45;
+      }
+      .sheet {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding-bottom: 18px;
+        border-bottom: 2px solid var(--line);
+        margin-bottom: 22px;
+        flex-wrap: wrap;
+      }
+      h1 {
+        font-size: 34px;
+        letter-spacing: 0.5px;
+      }
+      h1 .em {
+        color: var(--accent);
+      }
+      .sub {
+        color: var(--muted);
+        font-size: 15px;
+        margin-top: 4px;
+      }
+      .badges {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+      }
+      .badge {
+        background: var(--card2);
+        border: 1px solid var(--line);
+        padding: 6px 12px;
+        border-radius: 999px;
+        font-size: 13px;
+      }
+      .badge b {
+        color: var(--good);
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 20px;
+      }
+      .card h2 {
+        font-size: 18px;
+        margin-bottom: 14px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .card h2 .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: var(--accent);
+      }
+      .card.purple h2 .dot {
+        background: var(--accent2);
+      }
+      .card.full {
+        grid-column: 1 / -1;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+      }
+      li {
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+        font-size: 14.5px;
+      }
+      li .ic {
+        flex: 0 0 auto;
+      }
+      .tools {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      .tool {
+        background: var(--card2);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 10px 12px;
+      }
+      .tool code {
+        color: var(--accent);
+        font-weight: 700;
+        font-size: 14px;
+      }
+      .tool .d {
+        color: var(--muted);
+        font-size: 12.5px;
+        margin-top: 3px;
+      }
+      .tool.star {
+        border-color: var(--accent2);
+        box-shadow: 0 0 0 1px #a78bfa33 inset;
+      }
+      .tool.star code {
+        color: var(--accent2);
+      }
+      .qlist {
+        counter-reset: q;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .q {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        background: var(--card2);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 11px 13px;
+        font-size: 14px;
+      }
+      .q::before {
+        counter-increment: q;
+        content: counter(q);
+        flex: 0 0 26px;
+        height: 26px;
+        display: grid;
+        place-items: center;
+        background: var(--accent);
+        color: #06283d;
+        border-radius: 50%;
+        font-weight: 800;
+        font-size: 13px;
+      }
+      .q .txt b {
+        color: #fff;
+      }
+      .q .arrow {
+        color: var(--muted);
+        font-size: 13px;
+        margin-top: 3px;
+      }
+      .q code {
+        background: #0b1220;
+        border: 1px solid var(--line);
+        padding: 1px 6px;
+        border-radius: 6px;
+        color: var(--good);
+        font-size: 12.5px;
+      }
+      footer {
+        margin-top: 22px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 12.5px;
+      }
+      @media (max-width: 760px) {
+        .grid,
+        .tools {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sheet">
+      <header>
+        <div>
+          <h1>🔎 <span class="em">Research Agent</span></h1>
+          <div class="sub">
+            Trợ lý nghiên cứu tiếng Việt — tự chọn tool · gọi tool thật · tổng
+            hợp trả lời (multi-round &amp; multi-turn)
+          </div>
+        </div>
+        <div class="badges">
+          <span class="badge">openai · gpt-4o-mini · temp=0</span>
+          <span class="badge">Base <b>0.95</b> (19/20)</span>
+          <span class="badge">Group <b>10/10</b></span>
+          <span class="badge">UI: Streamlit Live Trace</span>
+        </div>
+      </header>
+
+      <div class="grid">
+        <!-- WHAT -->
+        <div class="card">
+          <h2><span class="dot"></span>Agent làm được gì?</h2>
+          <ul>
+            <li>
+              <span class="ic">🔎</span
+              ><span
+                >Tìm <b>tin tức / thông tin web</b>, gom thành digest có
+                nguồn</span
+              >
+            </li>
+            <li>
+              <span class="ic">🐦</span
+              ><span
+                >Lấy bài đăng <b>của một người</b> (map tên→handle) hoặc
+                <b>theo chủ đề</b></span
+              >
+            </li>
+            <li>
+              <span class="ic">📄</span
+              ><span>Đọc &amp; <b>tóm tắt một URL</b> bạn đưa vào</span>
+            </li>
+            <li>
+              <span class="ic">🧪</span
+              ><span
+                >Tra <b>paper khoa học (arXiv)</b> và
+                <b>chính sách nội bộ</b></span
+              >
+            </li>
+            <li>
+              <span class="ic">🏷️</span
+              ><span><b>Trích từ khóa nổi bật</b> từ dữ liệu đã thu thập</span>
+            </li>
+            <li>
+              <span class="ic">📤</span
+              ><span
+                >Gửi bản tin <b>Telegram</b> — luôn
+                <b>hỏi xác nhận trước</b></span
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- PRINCIPLES -->
+        <div class="card purple">
+          <h2><span class="dot"></span>Đặc tính nổi bật</h2>
+          <ul>
+            <li>
+              <span class="ic">🚫</span
+              ><span
+                ><b>Không đoán bừa</b> — thiếu handle/URL thì hỏi lại, không tự
+                bịa</span
+              >
+            </li>
+            <li>
+              <span class="ic">🧭</span
+              ><span
+                ><b>Routing rõ</b> — phân biệt người vs chủ đề vs web vs
+                đọc-link</span
+              >
+            </li>
+            <li>
+              <span class="ic">🔒</span
+              ><span
+                ><b>Tôn trọng ranh giới</b> — gửi ra ngoài luôn xác nhận
+                yes/no</span
+              >
+            </li>
+            <li>
+              <span class="ic">✋</span
+              ><span
+                ><b>Biết từ chối</b> câu ngoài phạm vi (toán, code, chuyện
+                đời)</span
+              >
+            </li>
+            <li>
+              <span class="ic">🧵</span
+              ><span
+                ><b>Giữ ngữ cảnh đa lượt</b> — carry-over &amp; ghi đè khi "đổi
+                ý"</span
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- TOOLS -->
+        <div class="card full">
+          <h2><span class="dot"></span>Agent có những tool gì?</h2>
+          <div class="tools">
+            <div class="tool">
+              <code>clarify</code>
+              <div class="d">
+                Hỏi lại khi thiếu thông tin / xin xác nhận trước khi gửi
+              </div>
+            </div>
+            <div class="tool">
+              <code>timeline</code>
+              <div class="d">
+                Lấy bài đăng gần đây của một tài khoản (tên→handle)
+              </div>
+            </div>
+            <div class="tool">
+              <code>social_search</code>
+              <div class="d">
+                Tìm bài đăng mạng xã hội theo chủ đề (Latest/Top)
+              </div>
+            </div>
+            <div class="tool">
+              <code>lookup</code>
+              <div class="d">
+                Tìm thông tin / tin tức trên web (general/news, theo thời gian)
+              </div>
+            </div>
+            <div class="tool">
+              <code>fetch</code>
+              <div class="d">Đọc nội dung một URL cụ thể để tóm tắt</div>
+            </div>
+            <div class="tool">
+              <code>format</code>
+              <div class="d">
+                Trình bày item đã thu thập thành bản tin markdown
+              </div>
+            </div>
+            <div class="tool">
+              <code>send</code>
+              <div class="d">
+                Gửi văn bản lên Telegram — chỉ sau khi xác nhận
+              </div>
+            </div>
+            <div class="tool">
+              <code>policy</code>
+              <div class="d">Tra cứu tài liệu / chính sách nội bộ</div>
+            </div>
+            <div class="tool">
+              <code>papers</code>
+              <div class="d">Tìm bài báo khoa học trên arXiv</div>
+            </div>
+            <div class="tool">
+              <code>paper_text</code>
+              <div class="d">Lấy nội dung text của một paper từ arXiv</div>
+            </div>
+            <div class="tool star">
+              <code>keywords ⭐</code>
+              <div class="d">
+                Trích top từ khóa nổi bật (tool nhóm tự viết, chạy cục bộ, không
+                API)
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SAMPLE QUESTIONS -->
+        <div class="card full purple">
+          <h2><span class="dot"></span>Vài câu hỏi mẫu để thử</h2>
+          <div class="qlist">
+            <div class="q">
+              <div class="txt">
+                <b>Tin tức AI hôm nay có gì nổi bật?</b>
+                <div class="arrow">
+                  → <code>lookup{news, day}</code> → digest có nguồn
+                </div>
+              </div>
+            </div>
+            <div class="q">
+              <div class="txt">
+                <b>Cho mình xem 7 tweet gần nhất của Sam Altman</b>
+                <div class="arrow">→ <code>timeline{sama, limit:7}</code></div>
+              </div>
+            </div>
+            <div class="q">
+              <div class="txt">
+                <b>Tóm tắt bài viết này hộ mình</b> (cố tình không kèm link)
+                <div class="arrow">
+                  → agent <b>hỏi lại URL</b>, không đoán bừa
+                </div>
+              </div>
+            </div>
+            <div class="q">
+              <div class="txt">
+                <b>https://www.anthropic.com/news/claude-3-5-sonnet</b>
+                <div class="arrow">
+                  → <code>fetch{url}</code> đọc đúng URL đó
+                </div>
+              </div>
+            </div>
+            <div class="q">
+              <div class="txt">
+                <b>Tìm paper về diffusion models</b>
+                <div class="arrow">→ <code>papers{query}</code> (arXiv)</div>
+              </div>
+            </div>
+            <div class="q">
+              <div class="txt">
+                <b>Đăng bản tin vừa rồi lên Telegram giúp mình</b>
+                <div class="arrow">
+                  → agent <b>hỏi xác nhận yes/no trước</b>, không tự gửi
+                </div>
+              </div>
+            </div>
+            <div class="q">
+              <div class="txt">
+                <b>Giải hộ mình phương trình x² − 5x + 6 = 0</b>
+                <div class="arrow">
+                  → agent <b>từ chối</b> (ngoài phạm vi), kéo về chủ đề research
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        Research Agent · Day 04 C401 — Prompt Engineering &amp; Tool Calling ·
+        Team DoHuyen04 · UI: <code>streamlit run app.py</code>
+      </footer>
+    </div>
+  </body>
+</html>
